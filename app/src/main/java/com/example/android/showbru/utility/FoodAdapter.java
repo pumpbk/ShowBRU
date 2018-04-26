@@ -5,8 +5,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
+import android.widget.TextView;
 
-public class FoodAdapter extends BaseAdapter{
+import com.example.android.showbru.R;
+import com.squareup.picasso.Picasso;
+
+public class FoodAdapter extends BaseAdapter {
 
     private Context context;
     private String[] imgaeStrings, foodStrings, priceStrings, detailStrings;
@@ -42,9 +47,19 @@ public class FoodAdapter extends BaseAdapter{
     public View getView(int position, View convertView, ViewGroup parent) {
 
         LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        View view = layoutInflater.inflate(R.layout.listview_food, parent, false);
 
+        TextView foodTextView = view.findViewById(R.id.txtFood);
+        TextView priceTextView = view.findViewById(R.id.txtPrice);
+        TextView detailTextView = view.findViewById(R.id.txtDetail);
+        ImageView imageView = view.findViewById(R.id.imvFood);
 
+        foodTextView.setText(foodStrings[position]);
+        priceTextView.setText(priceStrings[position]);
+        detailTextView.setText(detailStrings[position]);
 
-        return null;
+        Picasso.get().load(imgaeStrings[position]).into(imageView);
+
+        return view;
     }
 }
