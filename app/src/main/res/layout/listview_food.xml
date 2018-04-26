@@ -15,7 +15,7 @@
             android:layout_height="match_parent" />
 
         <RelativeLayout
-            android:background="#000000"
+            android:background="#50000000"
             android:padding="10dp"
             android:layout_alignParentBottom="true"
             android:layout_width="match_parent"
@@ -35,7 +35,7 @@
                 android:textColor="#ffffff"
                 android:layout_alignParentRight="true"
                 android:textStyle="bold"
-                android:textSize="48sp"
+                android:textSize="42sp"
                 android:text="50 THB"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
@@ -47,7 +47,7 @@
                 android:maxLines="2"
                 android:layout_alignParentBottom="true"
                 android:textStyle="italic"
-                android:textSize="24sp"
+                android:textSize="16sp"
                 android:text="Food Detail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
